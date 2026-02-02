@@ -1,0 +1,15 @@
+<h1>Animacjen Drugen Manchen</h1>
+
+<p>Nazwa Animacji: {{nazwaAnimacji}}</p>
+
+<p>Nazwa Efektu: {{nazwaEfektuAnimacji}}</p>
+
+<img 
+    [src]="foto"
+    alt="fotografia 2"
+    class = "zdjecia"
+    [class.transform]="transform"
+    (click)="togglTransform()"
+/>
+
+<p>Kliknij na zdjecie,aby powiekszyc/zmniejszyć</p>

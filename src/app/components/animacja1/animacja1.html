@@ -1,0 +1,15 @@
+<h1>Animacjen Jeden Manchen</h1>
+
+<p>Nazwa Animacji: {{nazwaAnimacji}}</p>
+
+<p>Nazwa Efektu: {{nazwaEfektuAnimacji}}</p>
+
+<img 
+    [src]="foto"
+    alt="fotografia 1"
+    class = "zdjecia"
+    [class.transform]="transform"
+    (click)="togglTransform()"
+/>
+
+<p>Kliknij na zdjecie,aby move axis </p>
