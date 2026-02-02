@@ -1,0 +1,11 @@
+<h1>Animacja 5 - Scale</h1>
+<p>Nazwa Animacji: {{nazwaAnimacji}}</p>
+<p>Nazwa Efektu: {{nazwaEfektuAnimacji}}</p>
+<img 
+    [src]="foto"
+    alt="fotografia 5"
+    class="zdjecia"
+    [class.transform]="transform"
+    (click)="togglTransform()"
+/>
+<p>Kliknij na zdjęcie, aby powiększyć</p>

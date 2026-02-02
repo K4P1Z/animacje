@@ -1,0 +1,11 @@
+.zdjecia {
+    width: 300px;
+    height: auto;
+    cursor: pointer;
+    transition: opacity 0.8s ease;
+    opacity: 1;
+}
+
+.zdjecia.transform {
+    opacity: 0.1;
+}

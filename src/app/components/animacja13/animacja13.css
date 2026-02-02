@@ -1,0 +1,14 @@
+.zdjecia {
+    width: 300px;
+    height: auto;
+    cursor: pointer;
+}
+
+.zdjecia.transform {
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+}

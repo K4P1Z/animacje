@@ -1,0 +1,11 @@
+.zdjecia {
+    width: 300px;
+    height: auto;
+    cursor: pointer;
+    transition: filter 0.6s ease;
+    filter: blur(0px);
+}
+
+.zdjecia.transform {
+    filter: blur(10px);
+}

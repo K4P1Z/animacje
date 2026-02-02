@@ -1,0 +1,11 @@
+<h1>Animacja 13 - Pulse</h1>
+<p>Nazwa Animacji: {{nazwaAnimacji}}</p>
+<p>Nazwa Efektu: {{nazwaEfektuAnimacji}}</p>
+<img 
+    [src]="foto"
+    alt="fotografia 13"
+    class="zdjecia"
+    [class.transform]="transform"
+    (click)="togglTransform()"
+/>
+<p>Kliknij na zdjęcie, aby pulsować</p>

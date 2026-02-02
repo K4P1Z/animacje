@@ -1,0 +1,10 @@
+.zdjecia {
+    width: 300px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.6s ease;
+}
+
+.zdjecia.transform {
+    transform: rotate(360deg);
+}

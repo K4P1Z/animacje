@@ -1,0 +1,11 @@
+.zdjecia {
+    width: 300px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
+}
+
+.zdjecia.transform {
+    transform: rotateY(180deg);
+}

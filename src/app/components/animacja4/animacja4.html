@@ -1,0 +1,11 @@
+<h1>Animacja 4 - Rotate</h1>
+<p>Nazwa Animacji: {{nazwaAnimacji}}</p>
+<p>Nazwa Efektu: {{nazwaEfektuAnimacji}}</p>
+<img 
+    [src]="foto"
+    alt="fotografia 4"
+    class="zdjecia"
+    [class.transform]="transform"
+    (click)="togglTransform()"
+/>
+<p>Kliknij na zdjęcie, aby obrócić</p>

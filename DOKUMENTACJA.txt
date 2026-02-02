@@ -1,0 +1,126 @@
+KOMPONENTY ANIMACJI - SUPER PROSTO
+===================================
+
+KOMPONENT = FOLDER Z 4 PLIKAMI
+- animacja1.ts (kod JavaScript)
+- animacja1.html (strona HTML)
+- animacja1.css (kolory i animacje)
+- animacja1.spec.ts (ignoruj to)
+
+
+JAK ROBIĆ NOWY KOMPONENT:
+ng g c components/animacja4
+
+BOOM! Angular sam tworzy folder i 4 pliki.
+
+
+PLIK .TS (KOD) - CO SIĘ DZIEJE:
+================================
+
+export class Animacja1 {
+  zdjecie = "public/gato1.jpeg";  // Zmienna
+  animacja = false;                // Czy animacja aktywna?
+  
+  klik() {                          // Metoda - funkcja
+    this.animacja = !this.animacja; // Zmienia true/false
+  }
+}
+
+Co tu się dzieje:
+- zdjecie = gdzie jest zdjęcie
+- animacja = czy efekt ON/OFF
+- klik() = co się dzieje gdy klikniesz
+
+
+PLIK .HTML (STRONA):
+====================
+
+<img [src]="zdjecie" [class.animacja]="animacja" (click)="klik()" />
+
+[src]="zdjecie" = przypisz zmienną zdjecie do atrybutu src
+[class.animacja]="animacja" = jeśli animacja=true, dodaj klasę "animacja"
+(click)="klik()" = klikniecie → uruchom funkcję klik()
+
+
+PLIK .CSS (STYL):
+=================
+
+img {
+    width: 300px;
+    transition: all 0.5s ease;
+}
+
+img.animacja {
+    transform: rotate(360deg);
+}
+
+img bez "animacja" = zwykłe zdj
+img.animacja = zdj. się obraca
+
+INNE EFEKTY:
+transform: scale(2) - powiększenie
+transform: translateX(100px) - przesunięcie w prawo
+transform: translateY(-100px) - przesunięcie w górę
+opacity: 0.1 - prawie niewidoczne
+filter: blur(10px) - rozmycie
+
+
+ROUTING (NAWIGACJA):
+====================
+
+W app-routing-module.ts:
+
+const routes = [
+  {path: "", component: Start},
+  {path: "animacja1", component: Animacja1},
+  {path: "animacja4", component: Animacja4},
+];
+
+localhost:4200/ = Start
+localhost:4200/animacja1 = Animacja1
+localhost:4200/animacja4 = Animacja4
+
+
+LINKI (app.html):
+=================
+
+<a routerLink="animacja1">Animacja 1</a>
+<a routerLink="animacja4">Animacja 4</a>
+
+routerLink = gdzie przejść
+
+
+JAK TO DZIAŁA W PRAKTYCE:
+=========================
+
+1. Klikasz link "Animacja 1"
+2. Angular wyświetla komponent Animacja1
+3. Widać HTML ze zdjęciem
+4. Klikasz na zdjęcie
+5. Uruchamia się klik()
+6. animacja zmienia się z false na true
+7. HTML dodaje klasę CSS "animacja"
+8. CSS zmienia transform
+9. Zdjęcie się animuje!
+
+
+POLECENIA:
+==========
+npm start = uruchom apkę
+ng g c components/nazwa = nowy komponent
+npm test = testy
+
+
+EFEKTY W NASZEJ APCE:
+====================
+Animacja 1 - obrót (rotate)
+Animacja 4 - rotate(360deg)
+Animacja 5 - powiększenie (scale)
+Animacja 6 - skrzywienie (skew)
+Animacja 7 - przezroczystość (opacity)
+Animacja 8 - obrót 3D (rotateY)
+Animacja 9 - rozmycie (blur)
+Animacja 10 - odbicie (bounce)
+Animacja 11 - przesunięcie (slide)
+Animacja 12 - trzęsienie (shake)
+Animacja 13 - pulsowanie (pulse)

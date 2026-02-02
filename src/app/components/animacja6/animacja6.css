@@ -1,0 +1,10 @@
+.zdjecia {
+    width: 300px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+.zdjecia.transform {
+    transform: skewX(20deg) skewY(10deg);
+}

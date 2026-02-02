@@ -1,0 +1,11 @@
+<h1>Animacja 10 - Bounce</h1>
+<p>Nazwa Animacji: {{nazwaAnimacji}}</p>
+<p>Nazwa Efektu: {{nazwaEfektuAnimacji}}</p>
+<img 
+    [src]="foto"
+    alt="fotografia 10"
+    class="zdjecia"
+    [class.transform]="transform"
+    (click)="togglTransform()"
+/>
+<p>Kliknij na zdjęcie, aby odbić</p>
